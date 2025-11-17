@@ -1,11 +1,6 @@
-# The following is the order of the links in the header of the website.
-#
-# Changing the order here will adjust the order and you can also add additional
-# links. Removing a link prevents it from showing in the header, but does not
-# prevent it from being included in the site.
-#
-# NOTE that only one of the CV options should be selected, the first is for the
-#      Markdown formatted page while the second is generated using JSON.
+#以下是网站页眉中链接的顺序。
+#在此处更改顺序将调整顺序，您还可以添加更多链接。删除链接将使其不会显示在页眉中，但不会阻止其包含在站点中。
+#请注意，只需选择其中一个简历选项，第一个选项用于 Markdown 格式的页面，而第二个选项则是使用 JSON 生成的。
 
 main:
   - title: "出版物"
@@ -14,20 +9,8 @@ main:
   - title: "留言"
     url: /talks/    
 
-#  - title: "教学"
-#   url: /teaching/    
-    
-#  - title: "Portfolio"
-#    url: /portfolio/
         
   - title: "博客"
     url: /year-archive/
     
-#  - title: "CV"
-#    url: /cv/
-    
-  # - title: "CV"
-  #   url: /cv-json/
-    
-#  - title: "Guide"
-#    url: /markdown/
+
