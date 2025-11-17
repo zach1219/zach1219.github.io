@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "About Me | 殷瑞"
+title: "About Me | zach"
 author_profile: true
 redirect_from: 
   - /about/
