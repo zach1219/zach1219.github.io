@@ -11,35 +11,19 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* F.C. in China People’s Police University, 2025
 
-Work experience
+工作经验
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
-
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* Xiaomi Campus , No. 33 Xi erqi Middle Road, Haidian District, Beijing,100085,China
   
-Skills
+能力
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* 安全系统方法
+  * 安全检查表法
+  *危害与可操作性分析（HAZOP）
+  * 失效模式与影响分析（英文：Failure mode and effects analysis，FMEA）
+*基本英语交流能力
 
 Publications
 ======

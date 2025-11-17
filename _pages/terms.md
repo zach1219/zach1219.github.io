@@ -7,33 +7,25 @@ modified: 2016-06-06
 {% include base_path %}
 {% include toc %}
 
-## Privacy Policy
+## 隐私政策
 
-The privacy of my visitors is extremely important. This Privacy Policy outlines the types of personal information that is received and collected and how it is used.
+访客的隐私至关重要。本隐私政策概述了本网站接收和收集的个人信息类型及其使用方式。
 
-First and foremost, I will never share your email address or any other personal information to anyone without your direct consent.
+首要原则是：未经您直接同意，我绝不会向任何人分享您的电子邮件地址或其他个人信息。
 
-### Log Files
+### 日志文件
 
-Like many other websites, this site uses log files to help learn about when, from where, and how often traffic flows to this site. The information in these log files include:
+与众多网站相同，本站使用日志文件来了解访问时间、来源地及流量频率。日志文件包含以下信息：
 
-* Internet Protocol addresses (IP)
-* Types of browser
-* Internet Service Provider (ISP)
-* Date and time stamp
-* Referring and exit pages
-* Number of clicks
+* 互联网协议地址（IP）
+* 浏览器类型
+* 互联网服务提供商（ISP）
+* 日期时间戳
+* 引荐页与退出页
+* 点击次数
 
-All of this information is not linked to anything that is personally identifiable.
-
-### Cookies and Web Beacons
-
-When you visit this site "convenience" cookies are stored on your computer when you submit a comment to help you log in faster to [Disqus](https://disqus.com) the next time you leave a comment.
-
-Third-party advertisers may also place and read cookies on your browser and/or use web beacons to collect information. This site has no access or control over these cookies. You should review the respective privacy policies on any and all third-party ad servers for more information regarding their practices and how to opt-out.
-
-If you wish to disable cookies, you may do so through your web browser options. Instructions for doing so can be found on the specific web browsers' websites.
+上述信息均不会与任何个人身份信息关联。
 
 #### Google Analytics
 
-Google Analytics is a web analytics tool I use to help understand how visitors engage with this website. It reports website trends using cookies and web beacons without identifying individual visitors. You can read [Google Analytics Privacy Policy](https://www.google.com/analytics/learn/privacy.html).
+Google Analytics 是我用于分析访客如何与本网站互动的网络分析工具。它通过使用 Cookie 和网络信标来报告网站趋势，但不会识别个人访客身份。您可查阅 [Google Analytics 隐私政策](https://www.google.com/analytics/learn/privacy.html)。
