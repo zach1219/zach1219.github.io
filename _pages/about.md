@@ -7,14 +7,13 @@ redirect_from:
   - /about.html
 ---
 
-# About Me | 殷瑞
+# About Me | zach
 
 哈哈哈，欢迎做客，祝你天天好运！
 
 
 # 关于我——“打破常规”
 
-@殷瑞
 
 03 / CPPU RCS / 湖北人 / istp电钻 / 风向天秤
 
