@@ -9,9 +9,9 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # Currently available options are "default", "air"
-title                    : "zach / 愿耐长久"
+title                    : "Your Name / Site Title"
 title_separator          : "-"
-name                     : &name "zach"
+name                     : &name "Your Name"
 description              : &description "Your Name's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://academicpages.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
@@ -24,13 +24,13 @@ repository               : "academicpages/academicpages.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  name             : "zach"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  bio              : "和水一样，虽然无味，愿耐长久。"
+  location         : "BEIJING"
+  employer         : "Xiaomi Campus , No. 33 Xi erqi Middle Road, Haidian District, Beijing,100085,China"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "contact.zach@foxmail.com" 
 
   # Academic websites
   academia         : # URL
