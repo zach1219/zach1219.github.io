@@ -21,9 +21,9 @@ redirect_from:
 ======
 * 安全系统方法
   * 安全检查表法
-  *危害与可操作性分析（HAZOP）
+  * 危害与可操作性分析（HAZOP）
   * 失效模式与影响分析（英文：Failure mode and effects analysis，FMEA）
-*基本英语交流能力
+* 基本英语交流能力
 
 出版物
 ======
