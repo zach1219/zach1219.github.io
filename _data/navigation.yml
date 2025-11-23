@@ -16,7 +16,15 @@ main:
   - title: "教程"
     url: /teaching/
     
-  - title: "CV"
-    url: /CV/
+  - title: "文件夹"
+    url: /portfolio/
         
-
+    
+  - title: "CV"
+    url: /cv/
+    
+  # - title: "CV"
+  #   url: /cv-json/
+    
+  #- title: "指导"
+  #  url: /markdown/
