@@ -1,12 +1,15 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your entire site, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve -l -H localhost`. If you change this file, please restart the 
-# server process.
+# 欢迎使用 Jekyll！
 
-# Basic Site Settings
+# # 此配置文件用于设置影响整个网站的参数值。
+
+# 这些参数值您只需设置一次，之后很少需要修改。
+
+# 由于技术原因，当您使用 `jekyll serve -l -H localhost` 命令时，此文件不会自动重新加载。
+
+# 如果您修改了此文件，请重启服务器进程。
+
+
+# 基础网站设置
 locale                   : "en-US"
 site_theme               : "air" # Currently available options are "default", "air"
 title                    : "好好吃饭"
@@ -18,9 +21,9 @@ url                      : https://zach1219.github.io/ # The base hostname & pro
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : #"academicpages/academicpages.github.io"
 
-# Site Author - The following control what appear as part of the author content on the side bar.
-#               If a field is blank the icon and link will not appear, otherwise it will be shown.
-#               Additional customization can be done by editing /_includes/author-profile.html
+# 网站作者 - 以下设置控制侧边栏中显示哪些作者信息。
+# 如果某个字段为空，则不会显示图标和链接；否则，将显示。
+# 可以通过编辑 /_includes/author-profile.html 文件进行更多自定义设置。
 author:
   # Biographic information
   avatar           : "profile.png"
@@ -32,7 +35,7 @@ author:
   uri              : #https://zach1219.github.io/ 
   email            : "contact.zach@foxmail.com" 
 
-  # Academic websites
+ # 学术网站
   academia         : # URL
   arxiv            : # URL - Update with the correct link to your profile
   googlescholar    : #"https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
@@ -44,7 +47,7 @@ author:
   researchgate     : # URL
   scopus           : # URL
 
-  # Repositories and software development
+# 代码库和软件开发
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
@@ -52,7 +55,7 @@ author:
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
-  # Social media
+ # 社交媒体
   artstation       : # Username
   bluesky          : #"bsky.app" # Replace this with you Bluesky username
   facebook         : # Username
@@ -79,7 +82,7 @@ author:
   youtube          : # Username
   zhihu            : # Username
 
-# Publication Category - The following the list of publication categories and their headings
+# 出版物类别 - 以下是出版物类别及其标题列表
 publication_category:
   books:
     title: 'Books'
@@ -88,12 +91,12 @@ publication_category:
   conferences:
     title: 'Conference Papers'
 
-# Site Settings
+# 站点设置
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
 future                   : true
-read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
+read_more                : "enabled" # if enabled, adds "Read more" links to excerpts
 talkmap_link             : false      #change to true to add link to talkmap on talks page
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
@@ -126,28 +129,28 @@ atom_feed:
   path                   : # blank (default) uses feed.xml
 
 
-# SEO Related
+# SEO 相关
 google_site_verification :
 bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
 
 
-# Social Sharing
-twitter:
-  username               : &twitter
-facebook:
-  username               :
-  app_id                 :
-  publisher              :
-og_image                 :  # Social media default site image
-og_description           :  # Social media default site image description
+# 社交分享
+#twitter:
+#  username               : &twitter
+#facebook:
+#  username               :
+#  app_id                 :
+#  publisher              :
+#og_image                 :  # Social media default site image
+#og_description           :  # Social media default site image description
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
-social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+#social:
+#  type                   : # Person or Organization (defaults to Person)
+#  name                   : # If the user or organization name differs from the site's name
+#  links: # An array of links to social media profiles
 
 
 # Analytics
