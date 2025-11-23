@@ -7,8 +7,6 @@ redirect_from:
   - /about.html
 ---
 
-# About Me
-
 哈哈哈，欢迎做客，祝你天天好运！
 
 
