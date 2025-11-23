@@ -37,11 +37,11 @@ redirect_from:
     {% include archive-single-talk-cv.html  %}
   {% endfor %}</ul>
   
-#教育
-#======
-#  <ul>{% for post in site.teaching reversed %}
-#    {% include archive-single-cv.html %}
-#  {% endfor %}</ul>
+教育
+======
+ <ul>{% for post in site.teaching reversed %}
+    {% include archive-single-cv.html %}
+  {% endfor %}</ul>
   
 服务和领导力
 ======
