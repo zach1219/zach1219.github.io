@@ -9,9 +9,9 @@ redirect_from:
 
 {% include base_path %}
 
-Education
+教育经历
 ======
-* F.C. in China People’s Police University, 2025
+* Firefighting Command in China People’s Police University, 2025
 
 工作经验
 ======
@@ -25,24 +25,24 @@ Education
   * 失效模式与影响分析（英文：Failure mode and effects analysis，FMEA）
 *基本英语交流能力
 
-Publications
+出版物
 ======
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Talks
+言论
 ======
   <ul>{% for post in site.talks reversed %}
     {% include archive-single-talk-cv.html  %}
   {% endfor %}</ul>
   
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+#教育
+#======
+#  <ul>{% for post in site.teaching reversed %}
+#    {% include archive-single-cv.html %}
+#  {% endfor %}</ul>
   
-Service and leadership
+服务和领导力
 ======
 * Currently signed in to 43 different slack teams
