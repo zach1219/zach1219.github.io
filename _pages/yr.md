@@ -1,5 +1,6 @@
 ---
 layout: null
+exclude_from_search: true
 permalink: /yr/
 ---
 <!DOCTYPE html>
