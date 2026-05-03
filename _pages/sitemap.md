@@ -11,163 +11,168 @@ author_profile: true
 .sitemap-hero {
   text-align: center;
   padding: 3rem 1rem 2rem;
-  margin-bottom: 2rem;
 }
 .sitemap-hero h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
   color: #1d1d1f;
   margin-bottom: 0.5rem;
 }
 .sitemap-hero p {
   font-size: 1.1rem;
   color: #86868b;
-  max-width: 500px;
-  margin: 0 auto;
-  line-height: 1.6;
 }
-.sitemap-section {
-  margin-bottom: 3rem;
+.mindmap {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
-.sitemap-section h2 {
-  font-size: 1.6rem;
+.mindmap-root {
+  text-align: center;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, #0066cc, #0077ed);
+  color: #fff;
+  border-radius: 16px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 102, 204, 0.2);
+}
+.mindmap-branch {
+  margin-bottom: 2.5rem;
+  padding-left: 1.5rem;
+  border-left: 3px solid #e5e5e7;
+}
+.mindmap-branch-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #1d1d1f;
-  padding-bottom: 0.75rem;
-  border-bottom: 1px solid #e5e5e7;
-  margin-bottom: 1.2rem;
-  letter-spacing: -0.01em;
-}
-.sitemap-section h2 i {
-  margin-right: 0.5rem;
-  color: #0071e3;
-  font-size: 1.3rem;
-}
-.sitemap-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.sitemap-list li {
-  border-bottom: 1px solid #f5f5f7;
-}
-.sitemap-list li:last-child {
-  border-bottom: none;
-}
-.sitemap-list a {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0.5rem;
-  color: #1d1d1f;
-  text-decoration: none;
-  font-size: 1.05rem;
-  transition: all 0.2s ease;
-  border-radius: 8px;
-}
-.sitemap-list a:hover {
+  margin-bottom: 1rem;
+  padding: 0.4rem 1rem;
   background: #f5f5f7;
-  padding-left: 1rem;
-  color: #0071e3;
+  border-radius: 8px;
+  position: relative;
+  left: -1.5rem;
 }
-.sitemap-list .date {
-  font-size: 0.85rem;
+.mindmap-branch-title i {
+  color: #0066cc;
+}
+.mindmap-node {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 0;
+  margin-left: 0.5rem;
+  position: relative;
+}
+.mindmap-node::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #0066cc;
+  border-radius: 50%;
+  margin-right: 1rem;
+  flex-shrink: 0;
+  opacity: 0.6;
+}
+.mindmap-node a {
+  color: #1d1d1f;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.mindmap-node a:hover {
+  color: #0066cc;
+}
+.mindmap-node .date {
+  margin-left: auto;
   color: #86868b;
-  font-variant-numeric: tabular-nums;
+  font-size: 0.8rem;
+  padding-left: 1rem;
   white-space: nowrap;
 }
-.sitemap-list .title {
-  flex: 1;
-  font-weight: 400;
-}
-.sitemap-empty {
-  text-align: center;
-  padding: 2rem;
+.mindmap-empty {
   color: #86868b;
   font-style: italic;
+  margin-left: 2rem;
+  padding: 0.5rem 0;
 }
-.sitemap-xml {
+.mindmap-footer {
   text-align: center;
   margin-top: 3rem;
   padding-top: 2rem;
   border-top: 1px solid #e5e5e7;
 }
-.sitemap-xml a {
-  color: #0071e3;
-  text-decoration: none;
-  font-size: 0.95rem;
+.mindmap-footer a {
+  color: #0066cc;
+  font-size: 0.9rem;
 }
-.sitemap-xml a:hover {
-  text-decoration: underline;
+@media (max-width: 768px) {
+  .mindmap-branch { padding-left: 1rem; }
+  .mindmap-branch-title { left: -1rem; font-size: 1rem; }
+  .mindmap-node .date { display: none; }
 }
 </style>
 
 <div class="sitemap-hero">
-  <h1>站点地图</h1>
-  <p>本站所有页面和文章的索引</p>
+  <h1>{{ site.title }}</h1>
+  <p>站点所有内容索引</p>
 </div>
 
-<div class="sitemap-section">
-  <h2><i class="fa fa-file-alt"></i> 页面</h2>
-  {% if site.pages.size > 0 %}
-  <ul class="sitemap-list">
-    {% for page in site.pages %}
-      {% unless page.title == nil or page.title == "" %}
-      <li>
-        <a href="{{ base_path }}{{ page.url }}">
-          <span class="title">{{ page.title }}</span>
-        </a>
-      </li>
+<div class="mindmap">
+  <div class="mindmap-root">{{ site.title }}</div>
+
+  <!-- Pages -->
+  <div class="mindmap-branch">
+    <div class="mindmap-branch-title"><i class="fa fa-file-alt"></i> 页面</div>
+    {% assign has_pages = false %}
+    {% for p in site.pages %}
+      {% unless p.title == nil or p.title == "" or p.url == "/sitemap/" or p.url == "/404.html" %}
+        {% assign has_pages = true %}
+        <div class="mindmap-node">
+          <a href="{{ base_path }}{{ p.url }}">{{ p.title }}</a>
+        </div>
       {% endunless %}
     {% endfor %}
-  </ul>
-  {% else %}
-  <p class="sitemap-empty">暂无页面</p>
-  {% endif %}
-</div>
+    {% unless has_pages %}
+      <p class="mindmap-empty">暂无页面</p>
+    {% endunless %}
+  </div>
 
-<div class="sitemap-section">
-  <h2><i class="fa fa-pencil-alt"></i> 文章</h2>
-  {% if site.posts.size > 0 %}
-  <ul class="sitemap-list">
-    {% for post in site.posts %}
-    <li>
-      <a href="{{ base_path }}{{ post.url }}">
-        <span class="title">{{ post.title }}</span>
-        <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
-      </a>
-    </li>
-    {% endfor %}
-  </ul>
-  {% else %}
-  <p class="sitemap-empty">暂无文章</p>
-  {% endif %}
-</div>
-
-{% capture written_label %}'None'{% endcapture %}
-{% for collection in site.collections %}
-  {% unless collection.output == false or collection.label == "posts" %}
-    {% capture label %}{{ collection.label }}{% endcapture %}
-    {% if label != written_label %}
-      <div class="sitemap-section">
-        <h2><i class="fa fa-folder-open"></i> {{ label }}</h2>
-        <ul class="sitemap-list">
-        {% capture written_label %}{{ label }}{% endcapture %}
+  <!-- Posts -->
+  <div class="mindmap-branch">
+    <div class="mindmap-branch-title"><i class="fa fa-pencil-alt"></i> 文章</div>
+    {% if site.posts.size > 0 %}
+      {% for post in site.posts %}
+        <div class="mindmap-node">
+          <a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>
+          <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p class="mindmap-empty">暂无文章</p>
     {% endif %}
-    {% for post in collection.docs %}
-      <li>
-        <a href="{{ base_path }}{{ post.url }}">
-          <span class="title">{{ post.title }}</span>
-          {% if post.date %}<span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>{% endif %}
-        </a>
-      </li>
-    {% endfor %}
-  {% endunless %}
-{% endfor %}
-</ul>
+  </div>
+
+  <!-- Collections -->
+  {% for collection in site.collections %}
+    {% unless collection.output == false or collection.label == "posts" %}
+      <div class="mindmap-branch">
+        <div class="mindmap-branch-title"><i class="fa fa-folder-open"></i> {{ collection.label }}</div>
+        {% for post in collection.docs %}
+          <div class="mindmap-node">
+            <a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>
+            {% if post.date %}<span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>{% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endunless %}
+  {% endfor %}
 </div>
 
-<div class="sitemap-xml">
+<div class="mindmap-footer">
   <a href="{{ base_path }}/sitemap.xml"><i class="fa fa-rss"></i> XML 站点地图</a>
 </div>
