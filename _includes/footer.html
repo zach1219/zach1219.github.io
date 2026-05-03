@@ -1,29 +1,66 @@
 {% include base_path %}
 
-{% if site.author.github or site.author.bitbucket or site.atom_feed.hide != true %}
-<div class="page__footer-follow">
-  <ul class="social-icons">
-    {% if site.data.ui-text[site.locale].follow_label %}
-      <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
-    {% endif %}
+<style>
+.page__footer {
+  background: #f5f5f7;
+  border-top: 1px solid #e5e5e7;
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+.page__footer footer {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem 2.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #d2d2d7;
+}
+.footer-links a {
+  color: #1d1d1f;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+.footer-links a:hover {
+  color: #0071e3;
+}
+.footer-links a i {
+  margin-right: 0.3rem;
+}
+.footer-copyright {
+  text-align: center;
+  color: #86868b;
+  font-size: 0.8rem;
+  line-height: 1.8;
+}
+.footer-copyright a {
+  color: #515154;
+  text-decoration: none;
+}
+.footer-copyright a:hover {
+  color: #0071e3;
+}
+</style>
+
+<footer>
+  <div class="footer-links">
     {% if site.author.github %}
-      <li><a href="https://github.com/{{ site.author.github }}"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
+      <a href="https://github.com/{{ site.author.github }}"><i class="fab fa-github"></i>GitHub</a>
     {% endif %}
-    {% if site.author.bitbucket %}
-      <li><a href="https://bitbucket.org/{{ site.author.bitbucket }}"><i class="fab fa-bitbucket" aria-hidden="true"></i> Bitbucket</a></li>
+    {% if site.author.email %}
+      <a href="mailto:{{ site.author.email }}"><i class="fa fa-envelope"></i>邮箱</a>
     {% endif %}
-    {% if site.atom_feed.hide != true %}
-    <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
-    {% endif %}
-  </ul>
-</div>
-{% endif %}
-
-<div class="page__footer-sitemap" style="text-align:center;margin-bottom:1rem;">
-  <a href="{{ base_path }}/sitemap/" style="color:#86868b;text-decoration:none;font-size:0.85rem;">站点地图</a>
-</div>
-
-<div class="page__footer-copyright">
-  &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}, {{ site.data.ui-text[site.locale].powered_by | default: "由" }} <a href="https://zach1219.github.io/" rel="nofollow">zach</a> <br />
-  站点更新于 {{ "now" | date: '%Y-%m-%d' }}
-</div>
+    <a href="{{ base_path }}/sitemap/">站点地图</a>
+    <a href="{{ base_path }}/feed.xml">RSS</a>
+  </div>
+  <div class="footer-copyright">
+    &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}<br>
+    由 <a href="https://zach1219.github.io/">zach</a> 创建 · 站点更新于 {{ "now" | date: '%Y-%m-%d' }}
+  </div>
+</footer>
