@@ -109,10 +109,6 @@ author_profile: true
     <div class="stat-label">文章</div>
   </div>
   <div class="stat-item">
-    <div class="stat-num">{{ site.pages | size }}</div>
-    <div class="stat-label">页面</div>
-  </div>
-  <div class="stat-item">
     <div class="stat-num">{{ site.categories | size }}</div>
     <div class="stat-label">分类</div>
   </div>
