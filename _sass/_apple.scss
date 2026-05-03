@@ -392,13 +392,12 @@ a:hover {
 
 .greedy-nav .visible-links li.masthead__menu-item a:hover {
   color: #0066cc !important;
+  background: none !important;
 }
 
 
 /* Remove underline animation from nav links */
-.greedy-nav .visible-links li.masthead__menu-item a::before {
-  display: none !important;
-}
+.greedy-nav .visible-links li.masthead__menu-item a::before { display: none !important; }
 
 /* Mobile hamburger */
 .greedy-nav button {
@@ -499,20 +498,19 @@ a:hover {
   font-size: 0.9rem;
   font-weight: 400;
   color: #333336 !important;
-  padding: 0.4rem 0.6rem;
-  margin: 0 0.1rem;
-  border-radius: 6px;
-  transition: background 0.2s, color 0.2s;
+  padding: 0;
+  margin: 0 0.8rem;
+  border-radius: 0;
+  background: none !important;
 }
 
 .greedy-nav .visible-links li.masthead__menu-item a:hover {
   color: #0066cc !important;
+  background: none !important;
 }
 
 /* Remove underline animation */
-.greedy-nav .visible-links li.masthead__menu-item a::before {
-  display: none !important;
-}
+.greedy-nav .visible-links li.masthead__menu-item a::before { display: none !important; }
 
 /* Mobile: smaller font */
 @media (max-width: 768px) {
