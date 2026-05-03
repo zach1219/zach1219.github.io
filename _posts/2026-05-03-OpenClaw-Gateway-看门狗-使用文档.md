@@ -1,10 +1,9 @@
 ---
 title: 'OpenClaw Gateway 看门狗 使用文档'
 date: 2026-05-03
-permalink: /posts/2026/05/03/2026-05-03-OpenClaw-Gateway-看门狗-使用文档/
+permalink: /posts/2026/05/03/OpenClaw-Gateway-看门狗-使用文档/
 tags:
   - 飞书文档
-source_url: 'https://firefuture.feishu.cn/docx/BVkQdyK0Zo0OQlxBFvecHCGbntD
 ---
 
 ![image]()
