@@ -224,7 +224,7 @@ body {
 <script>
 const GH_TOKEN = atob('Z2l0aHViX3BhdF8xMUFWTzZEVVEwR1lldmJudDBickJMX0Y2YjNWR3BSdk1nUDFDN2Fra0JIcFF1UkFTYW5QV2xNOGM0bkdrWkhtc2ZXRlBXUU5PSVhXTDl0dWsw');
 const REPO = 'zach1219/zach1219.github.io';
-const HEADERS = {'Authorization': 'token ' + GH_TOKEN, 'Accept': 'application/vnd.github.v3+json'};
+const HEADERS = {'Authorization': 'Bearer ' + GH_TOKEN, 'Accept': 'application/vnd.github.v3+json'};
 
 // Login
 function doLogin() {
@@ -257,12 +257,12 @@ async function loadDashboard() {
     // Load posts
     const postsResp = await fetch('https://api.github.com/repos/' + REPO + '/contents/_posts', {headers: HEADERS});
     const posts = await postsResp.json();
-    document.getElementById('statPosts').textContent = posts.length || 0;
+    document.getElementById('statPosts').textContent = Array.isArray(posts) ? posts.length : 0;
 
     // Load portfolio
     const portResp = await fetch('https://api.github.com/repos/' + REPO + '/contents/_portfolio', {headers: HEADERS});
     const portfolio = await portResp.json();
-    document.getElementById('statPortfolio').textContent = portfolio.length || 0;
+    document.getElementById('statPortfolio').textContent = Array.isArray(portfolio) ? portfolio.length : 0;
 
     // Load issues (comments)
     const issuesResp = await fetch('https://api.github.com/repos/' + REPO + '/issues?labels=comment', {headers: HEADERS});
