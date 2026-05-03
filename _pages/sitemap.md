@@ -8,9 +8,31 @@ author_profile: true
 {% include base_path %}
 
 <style>
+.stats-bar {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1.5rem 0;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e5e5e7;
+}
+.stat-item {
+  text-align: center;
+}
+.stat-num {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1d1d1f;
+}
+.stat-label {
+  font-size: 0.8rem;
+  color: #86868b;
+  margin-top: 0.2rem;
+}
 .mindmap {
   max-width: 800px;
-  margin: 2rem auto;
+  margin: 0 auto;
   padding: 0 1rem;
 }
 .mindmap-branch {
@@ -70,14 +92,39 @@ author_profile: true
   margin-left: 2rem;
 }
 @media (prefers-color-scheme: dark) {
+  .stats-bar { border-bottom-color: #38383d; }
+  .stat-num { color: #f5f5f7; }
+  .stat-label { color: #86868b; }
   .mindmap-branch { border-left-color: #38383d; }
   .mindmap-branch-title { background: #2c2c2e; color: #f5f5f7; }
   .mindmap-node a { color: #f5f5f7; }
   .mindmap-node a:hover { color: #2997ff; }
   .mindmap-node::before { background: #2997ff; }
-  .mindmap-node .date { color: #86868b; }
 }
 </style>
+
+<div class="stats-bar">
+  <div class="stat-item">
+    <div class="stat-num">{{ site.posts | size }}</div>
+    <div class="stat-label">文章</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">{{ site.pages | size }}</div>
+    <div class="stat-label">页面</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">{{ site.categories | size }}</div>
+    <div class="stat-label">分类</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">{{ site.tags | size }}</div>
+    <div class="stat-label">标签</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">{{ site.time | date: "%Y" }}</div>
+    <div class="stat-label">年份</div>
+  </div>
+</div>
 
 <div class="mindmap">
   <div class="mindmap-branch">
