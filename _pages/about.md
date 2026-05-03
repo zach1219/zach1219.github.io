@@ -1,85 +1,84 @@
 ---
 permalink: /
-title: "About Me"
+title: "首页"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-哈哈哈，欢迎做客，祝你天天好运！
+# 👋 关于我
 
-
-# 关于我——“打破常规”
-
-
-03 / CPPU RCS / istp电钻
-
-**一句话介绍：**一名来自米酒之乡——湖北孝感，但酒精过敏的无辣不欢圣体
+> **[待补充] 请在此处填写你的自我介绍**
+> 
+> 写好后告诉我，我帮你更新进来。
 
 ---
 
-# 兴趣爱好
+## 📝 最新博文
 
-## 探索性的工作 / 阅读
+{% assign sorted_posts = site.posts | sort: "date" | reverse %}
+{% for post in sorted_posts limit:3 %}
+- **{{ post.date | date: "%Y-%m-%d" }}** — [{{ post.title }}]({{ post.url }})
+{% endfor %}
+{% if site.posts.size == 0 %}
+*暂无博文*
+{% endif %}
 
-类似人文社科类的书籍📚
-
----
-
-## **制作**美食 / **喝**茶 / **吃**水果
-
-
----
-
-## 运动：游泳🏊♀️、潜水 / 网球~~菜鸡~~
-
-感觉游泳🏊♀️很放松，而且也是一门可以自救互救的技能，非常推荐✨✨✨✨✨大家掌握哦！
-
-潜水🤿因为在校期间上选修课逐渐掌握的技能，预计后面会去考一个潜水的证书
-
-网球🎾也是在校期间掌握的，不过因为场地要求高后面打得少了些
-
-比较喜欢运动，有计划把健身（跳绳）锻炼捡回来，拭目以待〰
+[查看全部博文 →](/year-archive/)
 
 ---
 
-## 游戏 ~~都很菜~~
+## 📚 最新出版物
 
-在毕业之前基本不玩，因为在校期间的学习和工作排的比较满，所以很少玩，这俩游戏都是临近毕业的时候和朋友们一起玩的，哈哈但基本都是他们带飞我，所以有没有大佬能够来带我起飞😜
+{% assign sorted_pubs = site.publications | sort: "date" | reverse %}
+{% for pub in sorted_pubs limit:3 %}
+- **{{ pub.date | date: "%Y-%m-%d" }}** — [{{ pub.title }}]({{ pub.url }})
+{% endfor %}
+{% if site.publications.size == 0 %}
+*暂无出版物*
+{% endif %}
 
-
-
-**王者荣耀🌚元梦之星**
-
-
-
----
-
-## 摄影
-
-从高三开始接触的摄影，个人比较喜欢研究风光摄影和人像摄影（因为涉及到其他人就不放啦哈哈哈），下面有一些拙作欢迎大家批评指正，生活中有很多美好的事情值得我们记录
-
+[查看全部出版物 →](/publications/)
 
 ---
 
-# [柚坛社区 UOTAN](https://www.uotan.cn/pages/about/)
+## 🎓 最新教程
 
+{% assign sorted_teaching = site.teaching | sort: "date" | reverse %}
+{% for item in sorted_teaching limit:3 %}
+- **{{ item.date | date: "%Y-%m-%d" }}** — [{{ item.title }}]({{ item.url }})
+{% endfor %}
+{% if site.teaching.size == 0 %}
+*暂无教程*
+{% endif %}
 
-- 从橙色星期五到现在的beta内测，之后开始慢慢发展各种社交平台，在 2021 年的时候认识并了解到了柚坛团队，并非常开心地加入了团队。
-    
-- 柚坛社区是一个偏极客的数码社区，并且拥有非常多优秀的、实力过硬的开发者，于是我们从零开始为资源开发者们建设了一个资源聚合平台，开发者们可以借助平台的流量曝光上架资源，将自己的成果转化为收益，平台通过少量的分成维持运营成本，算是双赢的模式。
-    
-- 考虑到数码社区的影响力不够广，我们开始慢慢转战自媒体平台，利用丰富的已有资源发布各类视频。2022年，我给柚坛社区设计更换了全新的品牌形象，并推动正式入驻了长视频和短视频平台。很快，我们发布的视频就达到了几十万播放量。同年，我们与社区资源开发者们共同发起的 MIUI 13 适配计划，为许多官方未适配的机型提供了使用机会，得到了国内外媒体如 IT 之家，xiaomiui 的报道，并登上了热搜榜单。
-    
-- 2023 年至今，我们与更多的资源开发者合作，发布了非常多优秀的刷机包资源，也得到了许多数码博主大 V 如小白测评的支持和宣传。
-    
+[查看全部教程 →](/teaching/)
 
-- 柚坛社区是一个时间跨度非常长的项目，通过柚坛社区，我认识了非常多优秀的网络朋友，大家在几年的时间里也都有了非常大的成长进步。
-    
+---
 
+## 💬 最新留言
 
+{% assign sorted_talks = site.talks | sort: "date" | reverse %}
+{% for talk in sorted_talks limit:3 %}
+- **{{ talk.date | date: "%Y-%m-%d" }}** — [{{ talk.title }}]({{ talk.url }})
+{% endfor %}
+{% if site.talks.size == 0 %}
+*暂无留言*
+{% endif %}
 
-# The End Note
+[查看全部留言 →](/talks/)
 
-祝你天天开心，工作再忙也要好好吃饭，好好锻炼！
+---
+
+## 📁 最新文件夹
+
+{% assign sorted_portfolio = site.portfolio | sort: "date" | reverse %}
+{% for item in sorted_portfolio limit:3 %}
+- **{{ item.date | date: "%Y-%m-%d" }}** — [{{ item.title }}]({{ item.url }})
+{% endfor %}
+{% if site.portfolio.size == 0 %}
+*暂无文件夹内容*
+{% endif %}
+
+[查看全部文件夹 →](/portfolio/)
