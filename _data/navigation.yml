@@ -1,10 +1,10 @@
 # Navigation menu
 main:
-  - title: "Memoir"
+  - title: "博客"
     url: /year-archive/
 
-  - title: "Gallery"
+  - title: "作品"
     url: /portfolio/
 
-  - title: "CV"
+  - title: "简历"
     url: /cv/
