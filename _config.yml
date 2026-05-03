@@ -84,12 +84,6 @@ author:
 
 # 出版物类别 - 以下是出版物类别及其标题列表
 publication_category:
-  books:
-    title: 'Books'
-  manuscripts:
-    title: 'Journal Articles'    
-  conferences:
-    title: 'Conference Papers'
 
 # 站点设置
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
@@ -221,16 +215,7 @@ kramdown:
 
 # These settings control the types of collections used by the template
 collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
-  publications:
-    output: true
-    permalink: /:collection/:path/
   portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
     output: true
     permalink: /:collection/:path/
 
