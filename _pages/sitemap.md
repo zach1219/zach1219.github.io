@@ -127,7 +127,7 @@ author_profile: true
 
   <!-- Pages -->
   <div class="mindmap-branch">
-    <div class="mindmap-branch-title"><i class="fa fa-file-alt"></i> 页面</div>
+    <div class="mindmap-branch-title">📄 页面</div>
     {% assign has_pages = false %}
     {% for p in site.pages %}
       {% unless p.title == nil or p.title == "" or p.url == "/sitemap/" or p.url == "/404.html" %}
@@ -144,7 +144,7 @@ author_profile: true
 
   <!-- Posts -->
   <div class="mindmap-branch">
-    <div class="mindmap-branch-title"><i class="fa fa-pencil-alt"></i> 文章</div>
+    <div class="mindmap-branch-title">✏️ 文章</div>
     {% if site.posts.size > 0 %}
       {% for post in site.posts %}
         <div class="mindmap-node">
@@ -161,7 +161,7 @@ author_profile: true
   {% for collection in site.collections %}
     {% unless collection.output == false or collection.label == "posts" %}
       <div class="mindmap-branch">
-        <div class="mindmap-branch-title"><i class="fa fa-folder-open"></i> {{ collection.label }}</div>
+        <div class="mindmap-branch-title">📂 {{ collection.label }}</div>
         {% for post in collection.docs %}
           <div class="mindmap-node">
             <a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>
@@ -174,5 +174,5 @@ author_profile: true
 </div>
 
 <div class="mindmap-footer">
-  <a href="{{ base_path }}/sitemap.xml"><i class="fa fa-rss"></i> XML 站点地图</a>
+  <a href="{{ base_path }}/sitemap.xml">📡 XML 站点地图</a>
 </div>
