@@ -1,6 +1,6 @@
-#浠ヤ笅鏄綉绔欓〉鐪変腑閾炬帴鐨勯『搴忋€?#鍦ㄦ澶勬洿鏀归『搴忓皢璋冩暣椤哄簭锛屾偍杩樺彲浠ユ坊鍔犳洿澶氶摼鎺ャ€傚垹闄ら摼鎺ュ皢浣垮叾涓嶄細鏄剧ず鍦ㄩ〉header涓紝浣嗕笉浼氶樆姝㈠叾鍖呭惈鍦ㄧ珯鐐逛腑銆?
+# Navigation menu
 main:
-  - title: "鍥炲繂褰?
+  - title: "Memoir"
     url: /year-archive/
 
   - title: "Gallery"
@@ -8,6 +8,3 @@ main:
 
   - title: "CV"
     url: /cv/
-
-  # - title: "CV"
-  #   url: /cv-json/
