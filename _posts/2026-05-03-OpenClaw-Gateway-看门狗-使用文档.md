@@ -8,7 +8,7 @@ tags:
 
 
 1. 部署（创建定时任务）
-schtasks /Create /TN "OpenClawGatewayWatchdog" /TR "powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File `"C:\Users\zach\.openclaw\workspace\tools\gateway-watchdog\watchdog.ps1`"" /SC MINUTE /MO 5 /RL HIGHEST /F 
+schtasks /Create /TN "OpenClawGatewayWatchdog" /TR "powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File `"C:\Users\<用户名>\.openclaw\workspace\tools\gateway-watchdog\watchdog.ps1`"" /SC MINUTE /MO 5 /RL HIGHEST /F 
 
 每 5 分钟触发一次，最高权限运行。
 
@@ -16,7 +16,7 @@ schtasks /Create /TN "OpenClawGatewayWatchdog" /TR "powershell.exe -NoProfile -E
 Start-ScheduledTask -TaskName "OpenClawGatewayWatchdog" 
 
 1. 手动测试脚本（直接运行，Ctrl+C 停止）
-powershell -ExecutionPolicy Bypass -File "C:\Users\zach\.openclaw\workspace\tools\gateway-watchdog\watchdog.ps1" 
+powershell -ExecutionPolicy Bypass -File "C:\Users\<用户名>\.openclaw\workspace\tools\gateway-watchdog\watchdog.ps1" 
 
 1. 停止看门狗
 # *方式一：禁用任务（保留）* 
@@ -35,13 +35,13 @@ Get-ScheduledTask -TaskName "OpenClawGatewayWatchdog" | Select-Object TaskName, 
 Get-ScheduledTask -TaskName "OpenClawGatewayWatchdog" | Get-ScheduledTaskInfo | Select-Object LastRunTime, NextRunTime, LastTaskResult 
 
 1. 查看日志
-Get-Content "C:\Users\zach\.openclaw\workspace\tools\gateway-watchdog\watchdog.log" -Tail 50 
+Get-Content "C:\Users\<用户名>\.openclaw\workspace\tools\gateway-watchdog\watchdog.log" -Tail 50 
 
 1. 修改配置（编辑 watchdog.ps1 顶部变量）
 1. 完全卸载
 schtasks /Delete /TN "OpenClawGatewayWatchdog" /F 
 
-Remove-Item "C:\Users\zach\.openclaw\workspace\tools\gateway-watchdog" -Recurse -Force 
+Remove-Item "C:\Users\<用户名>\.openclaw\workspace\tools\gateway-watchdog" -Recurse -Force 
 
 核心逻辑简述
 
@@ -92,7 +92,7 @@ tools\gateway-watchdog\
 以管理员身份运行 PowerShell，执行以下命令：
 
 ```
-schtasks /Create /TN "OpenClawGatewayWatchdog" /TR "powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File `"C:\Users\zach\.openclaw\workspace\tools\gateway-watchdog\watchdog.ps1`"" /SC MINUTE /MO 5 /RL HIGHEST /F
+schtasks /Create /TN "OpenClawGatewayWatchdog" /TR "powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File `"C:\Users\<用户名>\.openclaw\workspace\tools\gateway-watchdog\watchdog.ps1`"" /SC MINUTE /MO 5 /RL HIGHEST /F
 ```
 
 ### 步骤三：验证部署
@@ -129,7 +129,7 @@ $FeishuNotifyEnabled = $false  # 禁用通知
 
 1. 检查任务状态：Get-ScheduledTask -TaskName 'OpenClawGatewayWatchdog'
 1. 查看日志：Get-Content 'watchdog.log' -Tail 50
-1. 检查路径：Test-Path 'C:\Users\zach\.openclaw\gateway.cmd'
+1. 检查路径：Test-Path 'C:\Users\<用户名>\.openclaw\gateway.cmd'
 1. 飞书通知：检查日志中飞书相关错误
 ## 9. 高级配置
 
