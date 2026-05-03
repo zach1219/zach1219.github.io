@@ -1,3 +1,27 @@
+/* ===== Pure White Background Override ===== */
+:root {
+  --global-base-color: #ffffff !important;
+  --global-bg-color: #ffffff !important;
+  --global-footer-bg-color: #ffffff !important;
+}
+
+body {
+  background-color: #ffffff !important;
+}
+
+.masthead {
+  background: rgba(255, 255, 255, 0.95) !important;
+}
+
+.page__footer {
+  background: #ffffff !important;
+  border-top: 1px solid #e5e5e7;
+}
+
+.sidebar {
+  background: #ffffff !important;
+}
+
 /* ===== Apple Design System Override ===== */
 
 /* --- Typography --- */
