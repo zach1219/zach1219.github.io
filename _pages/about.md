@@ -1,84 +1,40 @@
 ---
 permalink: /
-title: "首页"
+title: "棣栭〉"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-# 👋 关于我
-
-> **[待补充] 请在此处填写你的自我介绍**
+# 鍏充簬鎴?
+> **[寰呰ˉ鍏匽 璇峰湪姝ゅ濉啓浣犵殑鑷垜浠嬬粛**
 > 
-> 写好后告诉我，我帮你更新进来。
-
+> 鍐欏ソ鍚庡憡璇夋垜锛屾垜甯綘鏇存柊杩涙潵銆?
 ---
 
-## 📝 最新博文
+## 馃摑 鏈€鏂板洖蹇嗗綍
 
 {% assign sorted_posts = site.posts | sort: "date" | reverse %}
 {% for post in sorted_posts limit:3 %}
-- **{{ post.date | date: "%Y-%m-%d" }}** — [{{ post.title }}]({{ post.url }})
+- **{{ post.date | date: "%Y-%m-%d" }}** 鈥?[{{ post.title }}]({{ post.url }})
 {% endfor %}
 {% if site.posts.size == 0 %}
-*暂无博文*
+*鏆傛棤鍥炲繂褰?
 {% endif %}
 
-[查看全部博文 →](/year-archive/)
+[鏌ョ湅鍏ㄩ儴鍥炲繂褰?鈫抅(/year-archive/)
 
 ---
 
-## 📚 最新出版物
-
-{% assign sorted_pubs = site.publications | sort: "date" | reverse %}
-{% for pub in sorted_pubs limit:3 %}
-- **{{ pub.date | date: "%Y-%m-%d" }}** — [{{ pub.title }}]({{ pub.url }})
-{% endfor %}
-{% if site.publications.size == 0 %}
-*暂无出版物*
-{% endif %}
-
-[查看全部出版物 →](/publications/)
-
----
-
-## 🎓 最新教程
-
-{% assign sorted_teaching = site.teaching | sort: "date" | reverse %}
-{% for item in sorted_teaching limit:3 %}
-- **{{ item.date | date: "%Y-%m-%d" }}** — [{{ item.title }}]({{ item.url }})
-{% endfor %}
-{% if site.teaching.size == 0 %}
-*暂无教程*
-{% endif %}
-
-[查看全部教程 →](/teaching/)
-
----
-
-## 💬 最新留言
-
-{% assign sorted_talks = site.talks | sort: "date" | reverse %}
-{% for talk in sorted_talks limit:3 %}
-- **{{ talk.date | date: "%Y-%m-%d" }}** — [{{ talk.title }}]({{ talk.url }})
-{% endfor %}
-{% if site.talks.size == 0 %}
-*暂无留言*
-{% endif %}
-
-[查看全部留言 →](/talks/)
-
----
-
-## 📁 最新文件夹
+## 馃柤锔?鏈€鏂癎allery
 
 {% assign sorted_portfolio = site.portfolio | sort: "date" | reverse %}
 {% for item in sorted_portfolio limit:3 %}
-- **{{ item.date | date: "%Y-%m-%d" }}** — [{{ item.title }}]({{ item.url }})
+- **{{ item.date | date: "%Y-%m-%d" }}** 鈥?[{{ item.title }}]({{ item.url }})
 {% endfor %}
 {% if site.portfolio.size == 0 %}
-*暂无文件夹内容*
+*鏆傛棤Gallery鍐呭*
 {% endif %}
 
-[查看全部文件夹 →](/portfolio/)
+[鏌ョ湅鍏ㄩ儴Gallery 鈫抅(/portfolio/)
