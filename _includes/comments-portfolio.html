@@ -1,0 +1,16 @@
+{% include base_path %}
+
+{% if site.repository %}
+<div class="page__comments">
+  <h2 class="page__comments-title">Comments</h2>
+  <script src="https://utteranc.es/client.js"
+          repo="{{ site.repository }}"
+          issue-term="pathname"
+          label="gallery-comment"
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+  </script>
+  <noscript>Please enable JavaScript to view the comments.</noscript>
+</div>
+{% endif %}
