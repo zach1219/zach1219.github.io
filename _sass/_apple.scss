@@ -490,14 +490,13 @@ a:hover {
     background: rgba(255, 255, 255, 0.85) !important;
   }
 
-  /* Hide theme toggle from visible links on mobile */
-  #theme-toggle {
+  /* Hide theme toggle from visible links on mobile, move to dropdown */
+  .greedy-nav .visible-links #theme-toggle {
     display: none !important;
   }
 
-  /* Show it in the hidden-links dropdown instead */
-  .hidden-links #theme-toggle,
-  .hidden-links li#theme-toggle {
+  /* Show theme toggle in hidden-links dropdown */
+  .hidden-links #theme-toggle {
     display: block !important;
   }
 
@@ -521,37 +520,20 @@ a:hover {
     padding: 0.7rem 1rem !important;
     border-radius: 8px !important;
     font-size: 0.95rem !important;
-    display: flex !important;
-    align-items: center;
-    gap: 0.5rem;
   }
 
   .greedy-nav .hidden-links a:hover {
     background: #f5f5f7 !important;
   }
-
-  /* Hamburger button style */
-  .greedy-nav button {
-    padding: 0.5rem !important;
-  }
-
-  .greedy-nav button .navicon {
-    background: #1d1d1f !important;
-  }
-
-  .greedy-nav button .navicon::before,
-  .greedy-nav button .navicon::after {
-    background: #1d1d1f !important;
-  }
 }
 
-/* Desktop: hide theme toggle from hidden-links, show in visible */
+/* Desktop: always show theme toggle in header */
 @media (min-width: 769px) {
-  .hidden-links #theme-toggle {
-    display: none !important;
-  }
-  #theme-toggle {
+  .greedy-nav .visible-links #theme-toggle {
     display: flex !important;
     align-items: center;
+  }
+  .hidden-links #theme-toggle {
+    display: none !important;
   }
 }
