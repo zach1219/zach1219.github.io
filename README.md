@@ -1,43 +1,28 @@
-# zach1219.github.io
+# 好好吃饭
 
-个人博客与作品集站点，基于 [Jekyll](https://jekyllrb.com/) 构建，托管于 [GitHub Pages](https://pages.github.com/)。
+个人站点，基于 [GitHub Pages](https://pages.github.com/) + [Jekyll](https://jekyllrb.com/) 构建。
 
-🔗 **在线访问**：[https://zach1219.github.io](https://zach1219.github.io)
+## 关于
 
-## 站点结构
+站点名称：好好吃饭
+作者：zach
+地址：[https://zach1219.github.io](https://zach1219.github.io)
 
-| 板块 | 说明 |
-|------|------|
-| **Memoir** | 回忆录 / 博客文章 |
-| **Gallery** | 作品展示 |
-| **CV** | 个人简历 |
+## 内容
+
+- **博客** — 文章与笔记
+- **作品** — 个人项目展示
+- **简历** — 个人简介
 
 ## 技术栈
 
-- **框架**：Jekyll
-- **主题**：Academic Pages (air)
-- **托管**：GitHub Pages
-- **评论**：Staticman（可选）
+- Jekyll + GitHub Pages
+- Academic Pages 模板
+- Utterances 评论系统（基于 GitHub Issues）
 
 ## 本地开发
 
 ```bash
-# 安装依赖
 bundle install
-
-# 启动本地服务器
-bundle exec jekyll serve
+bundle exec jekyll serve -l -H localhost
 ```
-
-访问 `http://localhost:4000` 预览。
-
-## 内容管理
-
-- 博客文章放在 `_posts/` 目录
-- Gallery 作品放在 `_portfolio/` 目录
-- 导航菜单在 `_data/navigation.yml` 配置
-- 站点参数在 `_config.yml` 配置
-
-## License
-
-MIT
