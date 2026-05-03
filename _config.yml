@@ -20,8 +20,7 @@ description              : &description "Your Name's academic portfolio"   # Upd
 url                      : https://zach1219.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : ""
-repository               : "zach1219/zach1219.github.io" # the subpath of your site, e.g. "/blog"
-repository               : #"academicpages/academicpages.github.io"
+repository               : "zach1219/zach1219.github.io"
 
 # 网站作者 - 以下设置控制侧边栏中显示哪些作者信息。
 # 如果某个字段为空，则不会显示图标和链接；否则，将显示。
