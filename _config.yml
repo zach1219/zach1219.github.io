@@ -11,7 +11,7 @@
 
 
 # 基础网站设置
-locale                   : "en-US"
+locale                   : "zh-CN"
 site_theme               : "air" # Currently available options are "default", "air"
 title                    : "好好吃饭"
 title_separator          : "-"
