@@ -147,7 +147,7 @@ title: ""
     <div class="search-box">
       <div class="search-input-wrap">
         <i class="fa fa-search"></i>
-        <input type="text" class="search-input" id="searchInput" placeholder="搜索文章和页面..." autofocus oninput="doSearch(this.value)">
+        <input type="text" class="search-input" id="searchInput" placeholder="搜索文章和页面..." autofocus oninput="doSearch(this.value)" onkeydown="if(event.key==='Enter')doSearch(this.value)">
         <button class="search-close" onclick="closeSearch()">
           <span class="search-kbd">ESC</span>
         </button>
@@ -205,5 +205,11 @@ function closeSearch() {
 
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeSearch();
+  if (e.key === 'Enter') {
+    const input = document.getElementById('searchInput');
+    if (document.activeElement === input && input.value.trim()) {
+      doSearch(input.value);
+    }
+  }
 });
 </script>
