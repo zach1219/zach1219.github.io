@@ -6,50 +6,6 @@ tags:
   - 飞书文档
 ---
 
-
-1. 部署（创建定时任务）
-schtasks /Create /TN "OpenClawGatewayWatchdog" /TR "powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File `"C:\Users\<用户名>\.openclaw\workspace\tools\gateway-watchdog\watchdog.ps1`"" /SC MINUTE /MO 5 /RL HIGHEST /F 
-
-每 5 分钟触发一次，最高权限运行。
-
-1. 手动启动看门狗
-Start-ScheduledTask -TaskName "OpenClawGatewayWatchdog" 
-
-1. 手动测试脚本（直接运行，Ctrl+C 停止）
-powershell -ExecutionPolicy Bypass -File "C:\Users\<用户名>\.openclaw\workspace\tools\gateway-watchdog\watchdog.ps1" 
-
-1. 停止看门狗
-# *方式一：禁用任务（保留）* 
-
-schtasks /Change /TN "OpenClawGatewayWatchdog" /DISABLE 
-
- 
-
-# *方式二：直接删除* 
-
-schtasks /Delete /TN "OpenClawGatewayWatchdog" /F 
-
-1. 查看状态
-Get-ScheduledTask -TaskName "OpenClawGatewayWatchdog" | Select-Object TaskName, State 
-
-Get-ScheduledTask -TaskName "OpenClawGatewayWatchdog" | Get-ScheduledTaskInfo | Select-Object LastRunTime, NextRunTime, LastTaskResult 
-
-1. 查看日志
-Get-Content "C:\Users\<用户名>\.openclaw\workspace\tools\gateway-watchdog\watchdog.log" -Tail 50 
-
-1. 修改配置（编辑 watchdog.ps1 顶部变量）
-1. 完全卸载
-schtasks /Delete /TN "OpenClawGatewayWatchdog" /F 
-
-Remove-Item "C:\Users\<用户名>\.openclaw\workspace\tools\gateway-watchdog" -Recurse -Force 
-
-核心逻辑简述
-
-- 双重检测：TCP 端口探测（3s 超时）+ WMI 查进程命令行（匹配 openclaw/gateway）
-- 连续失败 2 次 → kill 残留进程 → 重新拉起 gateway.cmd
-- 重启成功 → 发飞书通知 → 冷却 30 秒
-- 全局 Mutex 锁防止多实例并行
-- 日志超 10MB 自动轮转
 # OpenClaw Gateway 看门狗 使用文档
 
 ## 1. 概述
@@ -112,10 +68,10 @@ Get-ScheduledTask -TaskName "OpenClawGatewayWatchdog"
 ## 6. 工作原理
 
 1. 端口探测：连接 127.0.0.1:18789，超时 3 秒
-1. 进程检查：WMI 查询 node.exe 命令行含 openclaw/gateway
-1. 双重验证：端口可达且进程存在 = 正常
-1. 异常时 kill 残留 + 启动 gateway.cmd
-1. 恢复后发飞书通知 + 30 秒冷却
+2. 进程检查：WMI 查询 node.exe 命令行含 openclaw/gateway
+3. 双重验证：端口可达且进程存在 = 正常
+4. 异常时 kill 残留 + 启动 gateway.cmd
+5. 恢复后发飞书通知 + 30 秒冷却
 ## 7. 飞书通知
 
 - 触发条件：网关异常被自动恢复后
@@ -128,9 +84,9 @@ $FeishuNotifyEnabled = $false  # 禁用通知
 ## 8. 故障排查
 
 1. 检查任务状态：Get-ScheduledTask -TaskName 'OpenClawGatewayWatchdog'
-1. 查看日志：Get-Content 'watchdog.log' -Tail 50
-1. 检查路径：Test-Path 'C:\Users\<用户名>\.openclaw\gateway.cmd'
-1. 飞书通知：检查日志中飞书相关错误
+2. 查看日志：Get-Content 'watchdog.log' -Tail 50
+3. 检查路径：Test-Path 'C:\Users\<用户名>\.openclaw\gateway.cmd'
+4. 飞书通知：检查日志中飞书相关错误
 ## 9. 高级配置
 
 ```
