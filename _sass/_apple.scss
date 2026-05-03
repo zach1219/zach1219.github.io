@@ -145,7 +145,7 @@ a:hover { color: #0077ed; }
 .page__comments-inner { background: #fafafa; border: 1px solid #e5e5e7; border-radius: 12px; padding: 1.5rem; }
 
 /* ===== Footer ===== */
-.page__footer { background: #ffffff !important; border-top: 1px solid #e5e5e7; }
+.page__footer { background: #ffffff !important; border-top: 1px solid #e5e5e7; margin-top: 0 !important; padding-top: 0 !important; }
 
 /* ===== Selection ===== */
 ::selection { background: #b3d7ff; }
