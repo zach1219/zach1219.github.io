@@ -20,9 +20,11 @@ layout: default
       <h1 class="page__title">{{ page.title }}</h1>
     {% endunless %}
     {{ content }}
-    
+
     {% if page.comments != false %}
-      {% include comments-portfolio.html %}
+      <section class="page__comments">
+        {% include comments-portfolio.html %}
+      </section>
     {% endif %}
   </div>
 </div>
