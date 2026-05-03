@@ -460,3 +460,14 @@ a:hover {
 .greedy-nav {
   padding-right: 0 !important;
 }
+
+/* ===== Search Icon ===== */
+.masthead__menu-item a .fa-search {
+  font-size: 1rem;
+  color: #333336;
+  transition: color 0.2s;
+}
+
+.masthead__menu-item a:hover .fa-search {
+  color: #0066cc;
+}
