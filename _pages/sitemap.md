@@ -125,23 +125,6 @@ author_profile: true
 <div class="mindmap">
   <div class="mindmap-root">{{ site.title }}</div>
 
-  <!-- Pages -->
-  <div class="mindmap-branch">
-    <div class="mindmap-branch-title">📄 页面</div>
-    {% assign has_pages = false %}
-    {% for p in site.pages %}
-      {% unless p.title == nil or p.title == "" or p.url == "/sitemap/" or p.url == "/404.html" %}
-        {% assign has_pages = true %}
-        <div class="mindmap-node">
-          <a href="{{ base_path }}{{ p.url }}">{{ p.title }}</a>
-        </div>
-      {% endunless %}
-    {% endfor %}
-    {% unless has_pages %}
-      <p class="mindmap-empty">暂无页面</p>
-    {% endunless %}
-  </div>
-
   <!-- Posts -->
   <div class="mindmap-branch">
     <div class="mindmap-branch-title">✏️ 文章</div>
