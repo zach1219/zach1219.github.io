@@ -1,0 +1,27 @@
+---
+layout: null
+permalink: /search.json
+---
+[
+{% for post in site.posts %}
+  {
+    "title": {{ post.title | jsonify }},
+    "url": "{{ post.url | prepend: site.baseurl }}",
+    "date": "{{ post.date | date: "%Y-%m-%d" }}",
+    "excerpt": {{ post.excerpt | strip_html | strip_newlines | jsonify }},
+    "type": "文章"
+  }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+{% if site.posts.size > 0 and site.pages.size > 0 %},{% endif %}
+{% for page in site.pages %}
+  {% unless page.title == nil or page.title == "" or page.url == "/search.json/" or page.url == "/sitemap/" or page.url == "/404.html" %}
+  {
+    "title": {{ page.title | jsonify }},
+    "url": "{{ page.url | prepend: site.baseurl }}",
+    "date": "",
+    "excerpt": {{ page.content | strip_html | strip_newlines | truncatewords: 30 | jsonify }},
+    "type": "页面"
+  }{% unless forloop.last %},{% endunless %}
+  {% endunless %}
+{% endfor %}
+]
