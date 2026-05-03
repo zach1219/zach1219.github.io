@@ -86,7 +86,7 @@ a:hover {
   margin-top: 2.5rem;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid #e5e5e7;
+  border-bottom: none !important;
 }
 
 .page__content h3 {
@@ -470,4 +470,12 @@ a:hover {
 
 .masthead__menu-item a:hover .fa-search {
   color: #0066cc;
+}
+
+/* Remove all header borders */
+.masthead::after {
+  display: none !important;
+}
+.masthead {
+  border-bottom: none !important;
 }
