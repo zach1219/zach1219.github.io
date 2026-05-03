@@ -6,7 +6,6 @@ tags:
   - 飞书文档
 ---
 
-![image]()
 
 1. 部署（创建定时任务）
 schtasks /Create /TN "OpenClawGatewayWatchdog" /TR "powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File `"C:\Users\zach\.openclaw\workspace\tools\gateway-watchdog\watchdog.ps1`"" /SC MINUTE /MO 5 /RL HIGHEST /F 
