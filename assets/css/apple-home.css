@@ -350,7 +350,7 @@
 }
 
 /* Hide theme elements we don't need on homepage */
-.page__content, .page__sidebar { display: none !important; }
+.page__sidebar { display: none !important; }
 
 /* ===== Responsive: Tablet ===== */
 @media (max-width: 960px) {
@@ -408,4 +408,20 @@
   .apple-quote-section {
     padding: 80px 20px;
   }
+}
+
+/* Fix theme wrapper padding */
+.page__content {
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: none !important;
+}
+
+.page__content .page__inner-wrap {
+  padding: 0 !important;
+}
+
+.page__content .initial-content {
+  padding: 0 !important;
+  margin: 0 !important;
 }
