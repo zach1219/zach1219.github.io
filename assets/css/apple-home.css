@@ -92,7 +92,7 @@
 .apple-hero-content {
   position: relative;
   z-index: 1;
-  max-width: min(90vw, 1600px);
+  max-width: 100%;
 }
 
 .apple-hero h1 {
@@ -114,7 +114,7 @@
   font-weight: 300;
   color: rgba(255,255,255,0.55);
   line-height: 1.7;
-  max-width: 700px;
+  max-width: 100%;
   margin: 0 auto 48px;
 }
 
@@ -164,7 +164,7 @@
 }
 
 .apple-container {
-  max-width: min(92vw, 1800px);
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -307,7 +307,7 @@
 .apple-quote {
   position: relative;
   z-index: 1;
-  max-width: min(80vw, 1400px);
+  max-width: 100%;
   margin: 0 auto;
 }
 
