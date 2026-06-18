@@ -7,7 +7,6 @@ redirect_from:
   - /about.html
 ---
 
-<!-- Apple-style Navigation -->
 <nav class="home-nav">
   <a class="nav-logo" href="/">好好吃饭</a>
   <div class="nav-links">
@@ -17,7 +16,6 @@ redirect_from:
   </div>
 </nav>
 
-<!-- Hero Section -->
 <section class="apple-hero">
   <div class="apple-hero-content">
     <h1>好好吃饭</h1>
@@ -29,10 +27,9 @@ redirect_from:
   </div>
 </section>
 
-<!-- Posts Section -->
 <section class="apple-content" id="posts">
   <div class="apple-container">
-    <div class="apple-section-header apple-reveal">
+    <div class="apple-section-header">
       <h2>最新文章</h2>
       <p>记录生活与思考</p>
     </div>
@@ -40,7 +37,7 @@ redirect_from:
     <div class="apple-posts-grid">
       {% assign sorted_posts = site.posts | sort: "date" | reverse %}
       {% for post in sorted_posts limit:6 %}
-      <a href="{{ post.url }}" class="apple-post-card apple-reveal">
+      <a href="{{ post.url }}" class="apple-post-card">
         <div class="card-date">{{ post.date | date: "%Y-%m-%d" }}</div>
         <div class="card-title">{{ post.title }}</div>
         {% if post.excerpt %}
@@ -58,32 +55,16 @@ redirect_from:
     </div>
 
     {% if site.posts.size > 6 %}
-    <div class="apple-view-all apple-reveal">
+    <div class="apple-view-all">
       <a href="/year-archive/">查看全部文章</a>
     </div>
     {% endif %}
   </div>
 </section>
 
-<!-- Quote Section -->
 <section class="apple-quote-section">
-  <div class="apple-quote apple-reveal">
+  <div class="apple-quote">
     <blockquote>生活慢下来，才懂滋味。</blockquote>
     <p class="quote-author">好好吃饭</p>
   </div>
 </section>
-
-<!-- Scroll Reveal Script -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  var reveals = document.querySelectorAll('.apple-reveal');
-  var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.15 });
-  reveals.forEach(function(el) { observer.observe(el); });
-});
-</script>
