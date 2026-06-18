@@ -1,10 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
 
 /* ===== Reset theme conflicts ===== */
-.page { max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
-#main, .page__inner-wrap, article.page { max-width: 100% !important; width: 100% !important; }
-.page__footer footer { max-width: 100% !important; }
-.masthead__inner-wrap { max-width: 100% !important; }
+body .page,
+body #main,
+body .page__inner-wrap,
+body article.page,
+body .page__footer footer,
+body .masthead__inner-wrap,
+body .wrapper {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
 .masthead { display: none !important; }
 .page__footer { margin-top: 0 !important; }
 
