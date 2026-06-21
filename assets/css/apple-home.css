@@ -438,3 +438,16 @@ body .wrapper {
   padding: 0 !important;
   margin: 0 !important;
 }
+
+/* Article pages — add horizontal padding */
+body article.page {
+  padding: 0 clamp(20px, 5vw, 80px) !important;
+}
+
+body article.page .page__inner-wrap {
+  padding: 0 !important;
+}
+
+body article.page .page__content {
+  padding: 0 !important;
+}
